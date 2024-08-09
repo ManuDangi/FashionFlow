@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - FashionFlow</title>
+    <link rel="stylesheet" href="man.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FashionFlow</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="wishlist.html">Shop</a></li>
+                <li><a href="shop.html">Women</a></li>
+                <li><a href="man.html">Men</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#"><i class="search-icon">🔍</i></a>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+            <a href="wishlist.html"><i class="wishlist-icon">❤️</i></a>
+            <a href="#" class="cart-link" onclick="toggleCart()">
+                <i class="cart-icon">🛒</i>
+                <span class="cart-badge" id="cart-item-count">0</span>
+            </a>
+            <a href="profile.html"><i class="profile-icon">👤</i></a>
+        </div>
+    </header>
+    <main class="shop-container">
+    
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/d/h/j/xl-men-rib-pp-polo-ds-petrol-green-ajolli-original-imah35v5asbt2e4r.jpeg?q=70" alt="Product 1">
+            <div class="details">
+                <h2>NENCY FASHION</h2>
+                <p>Self Design, Solid/Plain, Applique, Blocked Printed, Color Block, Embroidered Kanjivaram Cotton Silk, Cotton Blend Saree  (Pink)</p>
+                <div class="price">$49.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('NENCY FASHION', 49.99, 'https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/d/h/j/xl-men-rib-pp-polo-ds-petrol-green-ajolli-original-imah35v5asbt2e4r.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/t/z/f/xl-togrblhn-dp3-d145-tripr-original-imah3ac2axychunh.jpeg?q=70" alt="Product 2">
+            <div class="details">
+                <h2>AUSK </h2>
+                <p>Men Checkered Polo Neck Cotton Blend Black, Grey T-Shirt</p>
+                <div class="price">$9.59</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('KAYRAAH', 9.59, 'https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/t/z/f/xl-togrblhn-dp3-d145-tripr-original-imah3ac2axychunh.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/b/a/t/m-mens-lw-lycra-t-shirt-sti-original-imahyyzsgnztxfrh.jpeg?q=70" alt="Product 3">
+            <div class="details">
+                <h2>sti </h2>
+                <p>Men Printed Round Neck Polyester Red, Black T-Shirt</p>
+                <div class="price">$59.00</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('MIRCHI FASHION', 59.00, 'https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/b/a/t/m-mens-lw-lycra-t-shirt-sti-original-imahyyzsgnztxfrh.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/d/u/d/m-nvmt4-bg-uniberry-original-imagz4wkwctvugfp.jpeg?q=70" alt="Product 4">
+            <div class="details">
+                <h2>S-Line </h2>
+                <p>Men Slim Fit Solid Spread Collar Formal Shirt</p>
+                <div class="price">$89.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('TIBRA ATTIRE', 89.99, 'https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/d/u/d/m-nvmt4-bg-uniberry-original-imagz4wkwctvugfp.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/n/a/x/l-mt3-lg-uniberry-original-imagz8rtb2ytxxta.jpeg?q=70" alt="Product 5">
+            <div class="details">
+                <h2>Voroxy </h2>
+                <p>Men Regular Fit Solid Spread Collar Formal Shirt.</p>
+                <div class="price">$15.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('Women Viscose Rayon Kurta Pant Set', 15.99, 'https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/n/a/x/l-mt3-lg-uniberry-original-imagz8rtb2ytxxta.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://media.gq.com/photos/5873faf2b745bdd2729582ff/master/pass/170107_LCMFW17_DR07-6736.jpg" alt="Product 6">
+            <div class="details">
+                <h2>METRONAUT </h2>
+                <p>Men Regular Fit Solid Spread Collar Formal Shirt</p>
+                <div class="price">$42.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('FABUNNA COTTON', 42.99, 'https://media.gq.com/photos/5873faf2b745bdd2729582ff/master/pass/170107_LCMFW17_DR07-6736.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="shop-item">
+            <img src="https://cdn.shopify.com/s/files/1/0420/7073/7058/products/SNITCH-JUNE1394.jpg?v=1655450250&width=600" alt="Product 7">
+            <div class="details">
+                <h2>Long-sleeve shirt</h2>
+                <p>Men Striped Polo Neck Cotton Blend Dark Blue, Light Blue T-Shirt</p>
+                <div class="price">$73.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('KULDEVYANI', 73.99, 'https://cdn.shopify.com/s/files/1/0420/7073/7058/products/SNITCH-JUNE1394.jpg?v=1655450250&width=600')">Add to Cart</button>
+            </div>
+        </div>
+        <!-- New Product -->
+        <div class="shop-item">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/suit/n/n/k/40-3pcs-navyblue-40-dhingra-original-imagsh3uezhehzek.jpeg?q=70" alt="Product 8">
+            <div class="details">
+                <h2>Golden Tree </h2>
+                <p>Men Three Piece Suit Solid Suit</p>
+                <div class="price">$59.99</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('FABUNNA COTTON', 59.99, 'https://rukminim2.flixcart.com/image/612/612/xif0q/suit/n/n/k/40-3pcs-navyblue-40-dhingra-original-imagsh3uezhehzek.jpeg?q=70')">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Additional shop items go here -->
+        <div class="shop-item">
+            <img src="https://th.bing.com/th/id/OIP.mf_th4vqiQeCn-BZsx8NUAHaKD?w=526&h=714&rs=1&pid=ImgDetMain" alt="Product 2">
+            <div class="details">
+                <h2>Surhi </h2>
+                <p>Men Regular Fit Checkered Spread Collar Casual Shirt</p>
+                <div class="price">$19.19</div>
+                <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                <button class="add-to-cart" onclick="addToCart('KAYRAAH', 19.19, 'https://th.bing.com/th/id/OIP.mf_th4vqiQeCn-BZsx8NUAHaKD?w=526&h=714&rs=1&pid=ImgDetMain')">Add to Cart</button>
+            </div>
+        </div>
+            <div class="shop-item">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.8xGjfPF7Qw8vDye3bqfRbQHaIp&pid=Api&P=0&h=180" alt="Product 1">
+                <div class="details">
+                    <h2>Texco</h2>
+                    <p>Men Printed Round Neck Polyester Purple T-Shirt</p>
+                    <div class="price">$12.49</div>
+                    <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                    <button class="add-to-cart" onclick="addToCart('Texco', 12.49, 'https://tse4.mm.bing.net/th?id=OIP.8xGjfPF7Qw8vDye3bqfRbQHaIp&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.IRdX1EO0AyffSrjdC3gQ5QHaFI&pid=Api&P=0&h=180" alt="Product 2">
+                <div class="details">
+                    <h2>Texco</h2>
+                    <p>Men Solid Round Neck Polyester Black T-Shirt</p>
+                    <div class="price">$19.99</div>
+                    <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                    <button class="add-to-cart" onclick="addToCart('Texco', 19.99, 'https://tse2.mm.bing.net/th?id=OIP.IRdX1EO0AyffSrjdC3gQ5QHaFI&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.w7iJYNAlKt4DdJIQabddiwHaFj&pid=Api&P=0&h=180" alt="Product 3">
+                <div class="details">
+                    <h2>Roadster</h2>
+                    <p>Men Printed Round Neck Cotton Black T-Shirt</p>
+                    <div class="price">$25.50</div>
+                    <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+                <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+                    <button class="add-to-cart" onclick="addToCart('Roadster', 25.50, 'https://tse1.mm.bing.net/th?id=OIP.w7iJYNAlKt4DdJIQabddiwHaFj&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+            </div>
+            
+
+
+        
+    <!-- Cart Container -->
+    <div class="cart-container" id="cart-container">
+        <h2>Shopping Cart</h2>
+        <ul class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <div>
+            <strong>Total:</strong> $<span id="cart-total">0.00</span>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h1 class="logo-text"><span>Fashion</span>Flow</h1>
+                <p>Style Flows Here: Your Ultimate Fashion Destination! Explore Trendsetting Collections, Shop the Latest Looks, and Let Your Fashion Flow with Us!</p>
+                <p class="email">📧 FashionFlow@Gmail.com</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Product</h2>
+                <ul>
+                    <li><a href="index.html">Landing pages</a></li>
+                    <li><a href="wishlist.html">Shop</a></li>
+                    <li><a href="shop.html">Women</a></li>
+                    <li><a href="man.html">Men</a></li>
+                    <li><a href="acc.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section links">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Social</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100079467974527"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="https://x.com/Manudangi55"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/manu_dangi_55/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/manu-dangi-75321123a/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // JavaScript for handling cart functionality
+        let cart = [];
+        const cartItemCount = document.getElementById('cart-item-count');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const cartContainer = document.getElementById('cart-container');
+
+        function addToCart(product, price, image) {
+            const cartItem = {
+                product: product,
+                price: price,
+                image: image
+            };
+            cart.push(cartItem);
+            updateCart();
+        }
+
+        function updateCart() {
+            // Update cart item count
+            cartItemCount.textContent = cart.length;
+
+            // Clear cart items list
+            cartItems.innerHTML = '';
+
+            // Populate cart items list
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<img src="${item.image}" alt="${item.product}">
+                                <div>
+                                    <strong>${item.product}</strong><br>
+                                    $${item.price.toFixed(2)}
+                                </div>`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+
+            // Update total
+            cartTotal.textContent = total.toFixed(2);
+
+            // Show cart container
+            cartContainer.style.display = 'block';
+        }
+
+        function toggleCart() {
+            if (cartContainer.style.display === 'block') {
+                cartContainer.style.display = 'none';
+            } else {
+                cartContainer.style.display = 'block';
+            }
+        }
+    </script>
+      
+</body>
+</html>

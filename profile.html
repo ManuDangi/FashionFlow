@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: hwb(207 89% 6%);
+            color: #eae3e3;
+            line-height: 1.6;
+        }
+/* Header and Navigation Styles */
+header {
+    background-color: hwb(207 89% 6%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: fixed;
+   
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 60px; /* Adjust as needed */
+    vertical-align: middle;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    background-color: hwb(207 89% 6%);
+}
+
+.icons i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on smaller screens */
+    }
+    
+    .icons {
+        flex-direction: column;
+        
+    }
+    
+    #search-input {
+        width: 100%;
+    }
+}
+
+
+        main {
+            padding: 4rem 2rem 2rem;
+            max-width: 1720px;
+            margin: auto;
+        }
+
+        section {
+            background: rgb(10, 8, 8);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(117, 83, 83, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        } */
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            flex: 1;
+            min-width: 150px;
+            background: #04090e;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .payment-method img {
+            max-width: 100px;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-method h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-method p {
+            margin-bottom: 1rem;
+        }
+
+        .security-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #090c10;
+            border-radius: 5px;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #0d0e0e;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #dddddd;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #dbd1d1;
+            font-weight: bold;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(20% - 0rem);
+            margin-right: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            
+        }
+
+        .product img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer-section h2,
+        .footer-section h1 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section p,
+        .footer-section ul,
+        .footer-section li,
+        .footer-section a {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            padding-left: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a:hover {
+            color: #f4a460;
+        }
+
+        .footer .social-icons {
+            display: flex;
+        }
+
+        .footer .social-icons a {
+            margin-right: 10px;
+        }
+
+        .footer .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            color: #f4a460;
+        }
+
+        .logo-text span {
+            color: #fff;
+        }
+
+        .footer .email {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #f4a460;
+        }
+
+        .collapsible {
+            background-color: #e7e7e7;
+            color: #444;
+            cursor: pointer;
+            padding: 1rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .collapsible:hover {
+            background-color: #d3d3d3;
+        }
+
+        .collapsible.active, .collapsible:focus {
+            background-color: #d3d3d3;
+        }
+
+        .content {
+            padding: 1rem;
+            display: none;
+            overflow: hidden;
+            background-color: #0c0606;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 5px rgba(20, 19, 19, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .product {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Profile Edit Form */
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .profile-form label {
+            font-weight: bold;
+        }
+
+        .profile-form input, .profile-form textarea {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+
+        .profile-form button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-picture {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            object-fit: cover;
+        }
+
+        .profile-picture input {
+            margin-top: 0.5rem;
+        }
+
+
+        .social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.VYwaQBbKquTVz5aPjhGbYAHaEv&pid=Api&P=0&h=180" alt="FashionFlow Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="wishlist.html">Shop</a></li>
+                <li><a href="shop.html">Women</a></li>
+                <li><a href="man.html">Men</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#orders">Orders</a></li>
+                <li><a href="#payment">Payment</a></li>
+                <li><a href="#liked-products">Liked Products</a></li>
+                <li><a href="#AddToCard">Add to Card</a></li>
+            </ul>
+            <div class="icons">
+                <div class="search-container">
+                    <form>
+                        <input type="search" id="search-input" placeholder="Search...">
+                        <button id="search-button" type="submit">Search</button>
+                    </form>
+                </div>
+                <a href="wishlist.html" aria-label="Wishlist"><i class="wishlist-icon">❤️</i></a>
+                <a href="acc.html" aria-label="Cart"><i class="cart-icon">🛒</i></a>
+                <a href="profile.html" aria-label="Profile"><i class="profile-icon">👤</i></a>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- <div class="profile-header">
+        <h1>My Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#orders">Orders</a></li>
+                <li><a href="#payment">Payment</a></li>
+                <li><a href="#liked-products">Liked Products</a></li>
+                <li><a href="#AddToCard">Add To Card</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <main>
+        <section id="profile">
+            <h2>MANU DANGI</h2>
+            <div class="profile-picture">
+                <img src="https://images.pexels.com/photos/25102404/pexels-photo-25102404/free-photo-of-portrait-of-man-wearing-sunglasses-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Profile Picture">
+                <div>
+                    <input type="file" accept="image/*" id="profilePictureUpload">
+                    <label for="profilePictureUpload">Upload Profile Picture</label>
+                </div>
+            </div>
+            <form class="profile-form">
+                <label for="name">Name: Manu Dangi</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+                
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+        <section id="orders">
+            <h2>Order History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345</td>
+                        <td>2024-07-15</td>
+                        <td>Shipped</td>
+                        <td>$150.00</td>
+                    </tr>
+                    <tr>
+                        <td>12346</td>
+                        <td>2024-07-20</td>
+                        <td>Processing</td>
+                        <td>$80.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>12347</td>
+                        <td>2024-08-20</td>
+                        <td>Processing</td>
+                        <td>$10.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>12348</td>
+                        <td>2024-07-12</td>
+                        <td>Processing</td>
+                        <td>$34.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="payment">
+            <h2>Payment Methods</h2>
+            <p>We offer a variety of payment methods for your convenience. Choose the one that suits you best.</p>
+    
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="https://via.placeholder.com/100x50?text=Credit+Card" alt="Credit Card">
+                    <h3>Credit Card</h3>
+                    <p>We accept Visa, MasterCard, American Express, and Discover.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="https://via.placeholder.com/100x50?text=PayPal" alt="PayPal">
+                    <h3>PayPal</h3>
+                    <p>Pay securely using your PayPal account.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="https://via.placeholder.com/100x50?text=Bank+Transfer" alt="Bank Transfer">
+                    <h3>Bank Transfer</h3>
+                    <p>Transfer funds directly from your bank account.</p>
+                </div>
+                <div class="payment-method">
+                    <img src="https://via.placeholder.com/100x50?text=Cryptocurrency" alt="Cryptocurrency">
+                    <h3>Cryptocurrency</h3>
+                    <p>We accept Bitcoin and Ethereum for payments.</p>
+                </div>
+            </div>
+    
+            <div class="security-info">
+                <h3>Security Information</h3>
+                <p>We use industry-standard encryption to ensure that your payment information is kept safe and secure.</p>
+            </div>
+    
+            <div class="contact-info">
+                <h3>Need Help?</h3>
+                <p>If you have any questions or need assistance with your payment, please <a href="contact.html">contact our support team</a>.</p>
+            </div>
+        </section>
+
+        <section id="liked-products">
+            <h2>Liked Products</h2>
+            <div class="product">
+                <img src="https://plus.unsplash.com/premium_photo-1698339570849-445a3d7f3cbf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhc2hpb24lMjBtb2RlbCUyMFdvbWVucyUyMERlbmltJTIwSmFja2V0fGVufDB8fDB8fHww" alt="Product 1">
+                <p>Product 1</p>
+            </div>
+            <div class="product">
+                <img src="https://mrpg.scene7.com/is/image/MRP/01_1101512570_SI_00?$preset$&wid=455" alt="Product 2">
+                <p>Product 2</p>
+            </div>
+        </section>
+
+        <section id="AddToCard">
+            <h2>Add To Card</h2>
+            <p>Items you have added to your card.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2 class="logo-text">Fashion<span>Flow</span></h2>
+                <p>Welcome to FashionFlow, where fashion meets passion. Founded in [2024], we set out with a mission to redefine style and elegance. Our journey began with a simple idea: to provide fashion that reflects the true essence of individuality and sophistication.</p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100079467974527"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="https://x.com/Manudangi55"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/manu_dangi_55/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/manu-dangi-75321123a/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <p>Email: fashionflow@gmail.com</p>
+                <p>Phone: +91 7691997114</p>
+            </div>
+        </div>
+        <div class="email">© 2024 FashionFlow All rights reserved.</div>
+    </footer>
+
+    <script>
+        // JavaScript for Collapsible Sections
+        document.querySelectorAll('.collapsible').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('active');
+                const content = button.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .profile-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .profile-picture {
+            flex: 0 0 150px;
+            margin-right: 20px;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .profile-actions {
+            padding: 20px;
+        }
+
+        .actions-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Profile</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-picture">
+                        <img src="your-profile-picture.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Manu Dangi</h2>
+                        <p>Cloud Enthusiast | Web Developer | Tech Innovator</p>
+                        <p>Email: manu.dangi@example.com</p>
+                        <p>Phone: +1234567890</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <h3>Actions</h3>
+                    <div class="actions-buttons">
+                        <a href="#" class="btn">Edit Profile</a>
+                        <a href="#" class="btn">Change Password</a>
+                        <a href="#" class="btn">Logout</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Manu Dangi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> -->

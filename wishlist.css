@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb span {
+    font-weight: bold;
+}
+
+/* Wishlist Container Styles */
+.wishlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    flex: 1 1 calc(33.333% - 40px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* padding-left: 30px; */
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 60%;
+    height: 430px;
+}
+
+.details {
+    padding: 15px;
+}
+
+.details h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.price {
+    font-size: 16px;
+    margin: 0;
+}
+
+.new-price {
+    color: #e60000;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Newsletter Section Styles */
+.newsletter {
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    margin: 0 0 20px;
+}
+
+.newsletter p {
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #0077e6;
+    color: #fff;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #1291ec;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #fdfbfb;
+    color: #110d0d;
+    padding: 50px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: hsl(0, 25%, 5%);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .shop-item {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-item {
+        flex: 1 1 100%;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+}

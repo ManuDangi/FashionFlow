@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FashionFlow</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            height: 60px; /* Adjust as needed */
+            vertical-align: middle;
+        }
+
+        /* Main section styles */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .signup-form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .signup-form h1 {
+            margin-bottom: 1rem;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-form p {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-form a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #fff;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.VYwaQBbKquTVz5aPjhGbYAHaEv&pid=Api&P=0&h=180" alt="FashionFlow Logo">
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="signup-form">
+            <h1>Sign Up</h1>
+            <form action="submit_signup.php" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit"><a href="home.html">Sign-Up</a></button>
+            </form>
+            <p>Already have an account? <a href="index.html">Log in here</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FashionFlow. All rights reserved.</p>
+    </footer>
+</body>
+</html>

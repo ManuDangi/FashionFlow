@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="acess.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.VYwaQBbKquTVz5aPjhGbYAHaEv&pid=Api&P=0&h=180" alt="FashionFlow Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="wishlist.html">Shop</a></li>
+                <li><a href="shop.html">Women</a></li>
+                <li><a href="man.html">Men</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="icons">
+                <div class="icons">
+                    <div class="search-container">
+                        <form>
+                          <input type="search" id="search-input" placeholder="Search...">
+                          <button id="search-button">Search</button>
+                        </form>
+                      </div>
+                <a href="wishlist.html"><i class="wishlist-icon">❤️</i></a>
+                <a href="#"><i class="cart-icon" onclick="toggleCart()">🛒</i></a>
+                <a href="profile.html"><i class="profile-icon">👤</i></a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="accessories-container">
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/R.c651ed39370a8cbffd47e89dc5029853?rik=KQErjNYzMowkEA&riu=http%3a%2f%2fscene7.targetimg1.com%2fis%2fimage%2fTarget%2f65030-160825_1472139131579%3fwid%3d1796%26fmt%3dpjpeg%26qlt%3d60&ehk=%2fkpoHKGDsq%2f87ppWGbA3MsOcMCZI5p7BurPJeUab5pY%3d&risl=&pid=ImgRaw&r=0" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.SjzyhLLBBmKyY7ayzenWwQHaHa?w=1226&h=1226&rs=1&pid=ImgDetMain" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://i.pinimg.com/736x/2e/10/e4/2e10e4df2532e5f88da34a07a47778bb.jpg" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>  Tiffany & Co.
+            </h3>
+            <p class="price">$100.22</p>
+            <p>Tiffany's pieces often feature timeless designs and are celebrated for their craftsmanship and attention to detail. </p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://eona.qodeinteractive.com/wp-content/uploads/2020/05/single-product-img-18.jpg', 'Elegant watch with a classic design.')">Add to Cart</button>
+        </div>
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.gl40H5MrheBQH_8Wc152PAHaJQ?pid=ImgDet&w=182&h=227&c=7&dpr=1.1" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.IgEMCEfK2nuNasLJRYb7TwHaIJ?pid=ImgDet&w=184&h=202&c=7&dpr=1.1" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.R5Vz--dqJAoyVeLzuOXcjQHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>Stylish Watch</h3>
+            <p class="price">$99.99</p>
+            <p>Elegant watch with a classic design, perfect for any occasion.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.gl40H5MrheBQH_8Wc152PAHaJQ?pid=ImgDet&w=182&h=227&c=7&dpr=1.1')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.shd4L9lmcrFA5XrTwyqeggHaHa?pid=ImgDet&w=206&h=206&c=7&dpr=1.1" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.HLCJbsyHkflHHh3tW-bSDwHaHa?w=800&h=800&rs=1&pid=ImgDetMain" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.Ztf0-aA-5ySfnUE3FSf6ygHaLH?w=1200&h=1800&rs=1&pid=ImgDetMain" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>Letterflex D Necklace</h3>
+            <p class="price">$120.01</p>
+            <p>
+                The "Letterflex D Necklace" is a customizable necklace featuring a letter "D." It’s part of a collection that allows personalization with different letters or charms.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.shd4L9lmcrFA5XrTwyqeggHaHa?pid=ImgDet&w=206&h=206&c=7&dpr=1.1')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.BCmHPn-s4bAVeQfX09HmjwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.ztWwnarzncSzLDhfsoR69AHaHa?w=630&h=630&rs=1&pid=ImgDetMain" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://i.pinimg.com/originals/f1/dd/c8/f1ddc80072e97de3256ff5440bd05c8c.jpg" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>
+                Ruby Diamond Ring Ruby Ring Certified Natural</h3>
+            <p class="price">$200.99</p>
+            <p>Ruby Diamond Ring Ruby Ring Certified Natural 0.42CTS VS F - Etsy | Jewelry Wallpapers  Visual Search | View image | More.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://th.bing.com/th/id/OIP.BCmHPn-s4bAVeQfX09HmjwHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.ztWwnarzncSzLDhfsoR69AHaHa?w=630&h=630&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.cptRpBhch_tGG-TOLPe11QHaEu?rs=1&pid=ImgDetMain" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.mycffcWwLnLinqR_2XnxegHaLH?w=1200&h=1800&rs=1&pid=ImgDetMain" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.p7BDVwP3cNzX7mL9ZB0ElQHaLH?w=1000&h=1500&rs=1&pid=ImgDetMain" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>Nike</h3>
+            <p class="price">$99.99</p>
+            <p>Nike’s footwear combines functionality with style, making it a top choice for athletes and casual wearers alike..</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.p7BDVwP3cNzX7mL9ZB0ElQHaLH?w=1000&h=1500&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://i.pinimg.com/originals/bb/70/af/bb70af54960f56f23a620e3bb135e061.jpg" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.rtY9cOzYAao6JSHWwEkXcAHaIo?w=1140&h=1329&rs=1&pid=ImgDetMain" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.TKdXb4_1oToiiHikbYMfvgHaHa?pid=ImgDet&w=182&h=182&c=7&dpr=1.1" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3> Nordicmuse - Golden Hues</h3>
+            <p class="price">$99.99</p>
+            <p>Gold Adjustable Dual Drop Ring - Nordicmuse - Golden Hues</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.rtY9cOzYAao6JSHWwEkXcAHaIo?w=1140&h=1329&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://i.etsystatic.com/14875194/r/il/cf25df/2764522364/il_794xN.2764522364_soeo.jpg" alt="Golden chain" onclick="openModal(this)">
+                    <img src="https://i.pinimg.com/originals/01/5b/ce/015bce39329904050f5a2253989c23bf.jpg" alt="Nordicmuse" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.WkKgisIZUY9d0Q8XQedSfQHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1" alt="Gold Adjustable" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3> Golden Chain </h3>
+            <p class="price">$99.99</p>
+            <p>Gold Adjustable Dual Drop Ring - Nordicmuse - Golden chain</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.WkKgisIZUY9d0Q8XQedSfQHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.ILKaoWyZ-9XF2Z7_hz0MUwHaHa?w=900&h=900&rs=1&pid=ImgDetMain" alt="Rolex" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.YZxKNgHp9shDIoQ9pDPh9wHaGB?w=800&h=651&rs=1&pid=ImgDetMain" alt="Designer Sunglas" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.Zrgg7gxV-gCKw_Afd5OkkAHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.1" alt="Elegant Neckl" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3> Rolex</h3>
+            <p class="price">$99.99</p>
+            <p>Rolex is a prestigious Swiss watchmaker renowned for its high-quality, luxury timepieces. Known for models like the Submariner and the Datejust.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.ILKaoWyZ-9XF2Z7_hz0MUwHaHa?w=900&h=900&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.DwW9XDpr4T83KviU4JLjCAAAAA?&rs=1&pid=ImgDetMain" alt="Zara clothing" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.y9W9BB4HaVQ2CU9BiiXqHAHaI4?w=1250&h=1500&rs=1&pid=ImgDetMain" alt="prominent global " onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.CeJDVQwyoaEaV03bKo-KFAHaHa?w=1200&h=1200&rs=1&pid=ImgDetMain" alt=" retailer" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3> Zara clothing </h3>
+            <p class="price">$99.99</p>
+            <p>Zara is a prominent global fashion retailer founded in 1974 in Spain. Renowned for its trendy and affordable clothing, Zara offers a wide range of apparel for men, women, and children. </p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.CeJDVQwyoaEaV03bKo-KFAHaHa?w=1200&h=1200&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://eona.qodeinteractive.com/wp-content/uploads/2020/05/single-product-img-18.jpg" alt="Stylish Watch" onclick="openModal(this)">
+                    <img src="https://i.pinimg.com/originals/9f/b6/20/9fb620aea26d1551e3d105959dba72e9.jpg" alt="Designer Sunglasses" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.EuTs3av_Nm2oAaUd7E_g5wHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Elegant Necklace" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>Stylish Watch</h3>
+            <p class="price">$99.99</p>
+            <p>Elegant watch with a classic design, perfect for any occasion.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.EuTs3av_Nm2oAaUd7E_g5wHaLH?w=186&h=279&c=7&r=0&o=5&dpr=1.1&pid=1.7', 'Elegant watch with a classic design.')">Add to Cart</button>
+        </div>
+
+
+        <div class="accessory">
+            <div class="slider">
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/OIP.JCXQU3WhXycs2gMzQ6P2kwAAAA?rs=1&pid=ImgDetMain" alt="Swarovski's earrings" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.tHcd0gcN8xDr3Hl8rMNQIgHaHa?w=800&h=800&rs=1&pid=ImgDetMain" alt="luxury,s" onclick="openModal(this)">
+                    <img src="https://th.bing.com/th/id/OIP.6k8YYi-Zc5clFQ-sT11mPgHaHa?w=800&h=800&rs=1&pid=ImgDetMain" alt="sophisticated" onclick="openModal(this)">
+                </div>
+            </div>
+            <h3>Swarovski's earrings </h3>
+            <p class="price">$179.99</p>
+            <p>Swarovski's earrings are celebrated for their luxury, quality, and sophisticated appeal.</p>
+            <p class="brand-rating">H&M <span class="rating">⭐ 4.8</span></p>
+            <button class="more-button"><a href="https://www.flipkart.com/clothing-and-accessories/topwear/shirt/men-shirt/formal-shirt/pr?sid=clo,ash,axc,mmk,bk1&otracker=categorytree&otracker=nmenu_sub_Men_0_Formal%20Shirts" target="_blank">More</a></button>
+            <button class="add-to-cart" onclick="addToCart('Stylish Watch', 99.99, 'https://th.bing.com/th/id/OIP.6k8YYi-Zc5clFQ-sT11mPgHaHa?w=800&h=800&rs=1&pid=ImgDetMain')">Add to Cart</button>
+        </div>
+
+        <!-- Repeat similar structure for other products -->
+        <!-- Example for Designer Sunglasses -->
+      
+   
+
+
+
+    <div class="accessory">
+        <div class="slider">
+            <div class="slides">
+                <img src="https://static.india.com/wp-content/uploads/2017/09/fashion-accessories.jpg" alt="Necklaces on ebay" onclick="openModal(this)">
+                <img src="https://th.bing.com/th/id/OIP.qajY61pPWKKWteQvf39RxgAAAA?w=300&h=300&rs=1&pid=ImgDetMain" alt="Necklaces on ebay" onclick="openModal(this)">
+                <img src="https://th.bing.com/th/id/OIP.yXWha2MGsl-usjuTd2j1SgHaE7?rs=1&pid=ImgDetMain" alt="Necklace" onclick="openModal(this)">
+            </div>
+        </div>
+        <h3> Necklaces on ebay</h3>
+        <p class="price">$77.99</p>
+        <p>
+            Men's fashion accessories viii stock photo containing mens and fashion ...
+            Fashion Necklaces on ebay - Seriously, We Have Fashion Necklaces </p>
+        <p class="brand-rating">Ray-Ban <span class="rating">⭐ 4.5</span></p>
+        <button class="more-button"><a href="https://www.example.com" target="_blank">More</a></button>
+        <button class="add-to-cart" onclick="addToCart('Designer Sunglasses', 59.99, 'https://th.bing.com/th/id/OIP.qajY61pPWKKWteQvf39RxgAAAA?w=300&h=300&rs=1&pid=ImgDetMain')">Add to Cart</button>
+    </div>
+
+    <div id="cart-container" style="display: none;">
+        <h2>Shopping Cart</h2>
+        <p>Items in Cart: <span id="cart-item-count">0</span></p>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="toggleCart()">Close Cart</button>
+    </div>
+
+</div>
+
+
+
+ 
+<div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div id="caption"></div>
+</div>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h1 class="logo-text"><span>Fashion</span>Flow</h1>
+            <p>Style Flows Here: Your Ultimate Fashion Destination! Explore Trendsetting Collections, Shop the Latest Looks, and Let Your Fashion Flow with Us!</p>
+            <p class="email">📧 FashionFlow@Gmail.com</p>
+        </div>
+        <div class="footer-section links">
+            <h2>Product</h2>
+            <ul>
+                <li><a href="index.html">Landing pages</a></li>
+                <li><a href="wishlist.html">Shop</a></li>
+                <li><a href="shop.html">Women</a></li>
+                <li><a href="man.html">Men</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h2>Company</h2>
+            <ul>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h2>Social</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100079467974527"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                <a href="https://x.com/Manudangi55"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/manu_dangi_55/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/manu-dangi-75321123a/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="access.js"></script>
+</body>
+</html>
